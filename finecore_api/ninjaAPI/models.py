@@ -9,7 +9,10 @@ Note that each class/model is a table in the datbase
 
 from django.db import models
 
+
 import uuid
+from decimal import Decimal
+
 
 
 class UserApiKey(models.Model):
@@ -19,10 +22,9 @@ class UserApiKey(models.Model):
 
 
 
-
-
 class Transaction(models.Model):
-    uuid = models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True)  # Explicit primary key
+    transactionid = models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True)  # Explicit primary key
+    uuid = models.UUIDField(editable=False)
     api_key = models.CharField(max_length=255) # logs the api key that was used so can be useful for retracing instances of fraud
     description = models.CharField(max_length=255)
     amount = models.DecimalField(max_digits=25, decimal_places=2)
@@ -30,10 +32,6 @@ class Transaction(models.Model):
 
 
 
-
-
-
 class UserWallet(models.Model):
      uuid = models.ForeignKey(UserApiKey, editable=False, on_delete=models.CASCADE, to_field='uuid', related_name='balance')
-     balance = models.DecimalField(max_digits=25, decimal_places=2)
-
+     balance = models.DecimalField(max_digits=26, decimal_places=2, default=Decimal("0.0"))
