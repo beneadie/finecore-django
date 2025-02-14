@@ -16,10 +16,12 @@ from datetime import datetime
 api = NinjaAPI()
 
 SECRET_KEY = "jHnHG86273nKgD770l2aas125miihbVRGpPjGfRrrgjnmPmmQD0d83"
+
+
+
+
+
 # Schemas statically define the data neede for requests
-
-
-
 
 class TransactionCreditCreate(Schema):
     uuid: str
@@ -64,9 +66,7 @@ def create_api_key(request, createuserid: CreateUserID):
     # creates the user uuid, an initial API key and the time
     new_key = generate_api_key()
 
-    time_now = datetime.now()
-
-    api_model = UserApiKey.objects.create(key=new_key, created_at=time_now)
+    api_model = UserApiKey.objects.create(key=new_key)
     # will row of data in ApiKey table for this UUID
     return api_model
 
