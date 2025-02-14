@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "761fc0e4-229b-4d1a-b07f-0b47ddffcbc2",
+		"name": "finecore_django",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41334932"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/apis/ninjaAPI/test",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/apis/ninjaAPI/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"apis",
+						"ninjaAPI",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/apis/ninjaAPI/newuserid",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"secret_key\": \"jHnHG86273nKgD770l2aas125miihbVRGpPjGfRrrgjnmPmmQD0d83\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/apis/ninjaAPI/newuserid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"apis",
+						"ninjaAPI",
+						"newuserid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/apis/ninjaAPI/listalltransactions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "secret_key",
+						"value": "jHnHG86273nKgD770l2aas125miihbVRGpPjGfRrrgjnmPmmQD0d83",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"secret_key\": \"jHnHG86273nKgD770l2aas125miihbVRGpPjGfRrrgjnmPmmQD0d83\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/apis/ninjaAPI/listalltransactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"apis",
+						"ninjaAPI",
+						"listalltransactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/apis/ninjaAPI/getusertransactions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"uuid\": \"f6834b12-e995-4c99-9c96-ff6b7aab4777\",\r\n  \"api_key\": \"ev5geufRJDQ0w8ibfhpuGF4lmjs87M9s9GBS8PBIoj4lLHhmaYyzEw0NHXHYcCHt\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/apis/ninjaAPI/getusertransactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"apis",
+						"ninjaAPI",
+						"getusertransactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/apis/ninjaAPI/createtransaction",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"uuid\": \"f6834b12-e995-4c99-9c96-ff6b7aab4777\",\r\n  \"description\": \"Credit added to account\",\r\n  \"amount\": 100.70,\r\n  \"api_key\" : \"ev5geufRJDQ0w8ibfhpuGF4lmjs87M9s9GBS8PBIoj4lLHhmaYyzEw0NHXHYcCHt\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/apis/ninjaAPI/createtransaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"apis",
+						"ninjaAPI",
+						"createtransaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/apis/ninjaAPI/getallwallets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"secret_key\": \"jHnHG86273nKgD770l2aas125miihbVRGpPjGfRrrgjnmPmmQD0d83\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/apis/ninjaAPI/getallwallets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"apis",
+						"ninjaAPI",
+						"getallwallets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/apis/ninjaAPI/addfunds",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\": 2000,\r\n  \"uuid\": \"f6834b12-e995-4c99-9c96-ff6b7aab4777\",\r\n  \"api_key\": \"ev5geufRJDQ0w8ibfhpuGF4lmjs87M9s9GBS8PBIoj4lLHhmaYyzEw0NHXHYcCHt\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/apis/ninjaAPI/addfunds",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"apis",
+						"ninjaAPI",
+						"addfunds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/apis/ninjaAPI/checkuserbalance",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"uuid\": \"f6834b12-e995-4c99-9c96-ff6b7aab4777\",\r\n  \"api_key\": \"ev5geufRJDQ0w8ibfhpuGF4lmjs87M9s9GBS8PBIoj4lLHhmaYyzEw0NHXHYcCHt\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/apis/ninjaAPI/checkuserbalance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"apis",
+						"ninjaAPI",
+						"checkuserbalance"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
